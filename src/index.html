@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css%>">
+		<link rel="stylesheet" href="vendors/css/bootstrap.min.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<h1>Hello, world!</h1>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo accusamus magni, tempora excepturi modi similique. Non, eaque ad, eligendi dicta libero nesciunt ipsum illum esse totam culpa necessitatibus aliquam nemo?</p>
+				</div>
+			</div>
+		</div>
+		<script src="vendors/js/jquery-3.2.1.slim.min.js"></script>
+		<script src="vendors/js/bootstrap.min.js"></script>
+		<script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+	</body>
+</html>

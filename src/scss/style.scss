@@ -1,0 +1,23 @@
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #eee;
+$secondary-color: #fba;
+$padding-h1: 70px;
+$padding-h2: 50px;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+  background-color: $secondary-color;
+}
+
+h1 {
+  padding: $padding-h1;
+}
+
+h2 {
+  padding: $padding-h2
+}
+
+::placeholder {
+  color: gray;
+}
