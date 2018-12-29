@@ -12,13 +12,18 @@ let pathsToClean = [
 
 // The clean options to use
 let cleanOptions = {
-  exclude:  ['vendors'],
+  exclude:  ['vendors', 'img'],
   verbose:  true,
   dry:      false
 }
 
 module.exports = {
-  entry: { 
+  resolve: {
+    alias: {
+      'assets': path.resolve(__dirname, 'dist')
+    }
+  },
+  entry: {
     main: './src/js/index.js'
   },
   output: {
@@ -39,6 +44,10 @@ module.exports = {
       {
 	test: /\.scss$/,
         use: [ 'style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader']
+      },
+      {
+        test: /\.(png|jpg)$/,
+        loader: 'url-loader'
       }
     ]
   },
